@@ -11,19 +11,19 @@ void selection_sort(int *array, size_t size)
 	int temp, minIndex;
 	size_t i, j;
 
+	if (!array || !size)
+		return;
 	for (i = 0; i < size - 1; i++)
 	{
 		minIndex = i;
 		for (j = i + 1; j < size; j++)
 		{
 			if (array[j] < array[minIndex])
-			{
 				minIndex = j;
-				temp = array[j];
-				array[j] = array[minIndex];
-				array[minIndex] = temp;
-				print_array(array, size);
-			}
+			temp = array[j];
+			array[j] = array[minIndex];
+			array[minIndex] = temp;
+			print_array(array, size);
 		}
 	}
 }
