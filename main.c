@@ -21,7 +21,7 @@ int main(void)
     printf("Original array: ");
     print_array(arr, n);
 
-    selection_sort(arr, n);
+    quick_sort(arr, n);
 
     printf("Sorted array: ");
     print_array(arr, n);
